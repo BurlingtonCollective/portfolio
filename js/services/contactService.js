@@ -4,10 +4,8 @@ services.service('contactService', ['$http', '$q', function($http, $q){
 	this.pushSimpleForm = function(formObj){
 		console.log(formObj);
 		var deferred = $q.defer();
-		$http({
-			method: 'POST',
-			url: 'http://getsimpleform.com/messages/ajax?form_api_token='+self.simpleFormToken,
-			data: formObj
+		$http.jsonp('http://getsimpleform.com/messages/ajax?form_api_token='+self.simpleFormToken+'&callback=JSON_CALLBACK', {
+			params: formObj
 		}).then(function(result){
 			console.log('submitted');
 			console.log(result);
