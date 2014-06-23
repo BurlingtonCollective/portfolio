@@ -1,11 +1,15 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		uglify: {
-			options: {},
+			options: {
+				sourceMap: true
+			},
 			build: {
 				files: {
 					'build/master.js': [
-						'js/main.js'
+						'js/main.js',
+						'js/controllers/HomeCtrl.js',
+						'js/services/contactService.js'
 					]
 				}
 			}

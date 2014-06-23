@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolio">
 <head>
 	<title>Home | Burlington Collective</title>
 	<link rel="stylesheet" href="css/master.css">
 </head>
 <body>
+
+	<header>
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Burlington Collective</a>
+			</div>
+			<div class="collapse navbar-collapse" id="main-nav">
+				<p class="navbar-text navbar-right">Coming Soon!</p>
+			</div>
+		</nav>
+	</header>
+
+	<div id="main" ng-view autoscroll role="angular-view-target">
+		<!-- templates loaded here -->
+	</div>
 
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
