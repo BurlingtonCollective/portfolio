@@ -1,1 +1,37 @@
 @import '../bower_components/bootstrap/less/bootstrap';
+
+@purple: #6D05A3;
+@sky-blue: #80C3B7;
+@light-gray: #FAFAFA;
+@dark-gray: #292929;
+@white: #fff;
+
+
+html{
+	background: @light-gray;
+	.box-sizing(border-box);
+	min-height: 100%;
+	border-bottom: 8px solid @sky-blue;
+	body{
+		border-top: 8px solid @purple;
+	}
+}
+
+header{
+	@media(min-width: @screen-sm-min){
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 60%;
+		background: @dark-gray;
+		padding: 15px;
+		color: @white;
+	}
+}
+
+div#main{
+	@media(min-width: @screen-sm-min){
+		padding-left: 40%;
+	}
+}

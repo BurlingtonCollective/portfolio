@@ -5772,4 +5772,32 @@ button.close {
     display: none !important;
   }
 }
+html {
+  background: #fafafa;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 100%;
+  border-bottom: 8px solid #80c3b7;
+}
+html body {
+  border-top: 8px solid #6d05a3;
+}
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 60%;
+    background: #292929;
+    padding: 15px;
+    color: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  div#main {
+    padding-left: 40%;
+  }
+}
 /*# sourceMappingURL=css/master.css.map */
