@@ -5783,6 +5783,19 @@ html {
 html body {
   border-top: 8px solid #6d05a3;
 }
+html body .purechat.purechat-bottom-left.purechat-widget {
+  left: 0 !important;
+  right: 60%;
+}
+html body .purechat.purechat-bottom-left.purechat-widget .purechat-collapsed-outer,
+html body .purechat.purechat-bottom-left.purechat-widget .purechat-expanded {
+  width: 100%;
+  border-radius: 0px !important;
+  margin: 0;
+}
+header {
+  text-align: center;
+}
 @media (min-width: 768px) {
   header {
     position: fixed;

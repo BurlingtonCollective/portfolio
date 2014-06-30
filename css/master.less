@@ -14,10 +14,20 @@ html{
 	border-bottom: 8px solid @sky-blue;
 	body{
 		border-top: 8px solid @purple;
+		.purechat.purechat-bottom-left.purechat-widget{
+			left: 0 !important;
+			right: 60%;
+			.purechat-collapsed-outer, .purechat-expanded{
+				width: 100%;
+				border-radius: 0px !important;
+				margin: 0;
+			}
+		}
 	}
 }
 
 header{
+	text-align: center;
 	@media(min-width: @screen-sm-min){
 		position: fixed;
 		top: 0;
