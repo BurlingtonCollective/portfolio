@@ -2,31 +2,55 @@
 <html ng-app="portfolio">
 <head>
 	<title>Home | Burlington Collective</title>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,600|Quattrocento:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/master.css">
 </head>
-<body>
+<body id="fss-target">
 
 	<header>
-		<h1>Burlington Collective</h1>
-		<h3>(under construction)</h3>
-		<div class="cta-container">
-			<button class="btn btn-primary btn-block">Contact</button>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#/" class="brand">
+						<h1 class="navbar-text">Burlington Collective</h1>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="main-nav">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#/">Home</a></li>
+						<li><a href="#/projects">Projects</a></li>
+						<li><a href="#/about">About</a></li>
+						<li><a href="#/advice">Advice</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<!-- <ul class="nav nav-stacked">
-			<li><a href="#/">Home</a></li>
-			<li><a href="#/projects">Projects</a></li>
-			<li><a href="#/about">About</a></li>
-			<li><a href="#/advice">Advice</a></li>
-		</ul> -->
 	</header>
 
 	<div id="main" ng-view autoscroll role="angular-view-target">
 		<!-- templates loaded here -->
 	</div>
 
+	<footer>
+		<div class="wrapper">
+			<div class="container">
+				<div class="stretch"></div>
+			</div>
+		</div>
+	</footer>
+
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="build/master.js"></script>
-	<script type='text/javascript'>(function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://widget.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: '6030cf93-ce0b-4773-b886-6eab06a206c7', f: true }); done = true; } }; })();</script>
+	<script type="text/javascript">
+  var FHChat = {product_id: "ed6e6d7abb20"};
+  FHChat.properties={};FHChat.set=function(key,data){this.properties[key]=data};!function(){var a,b;return b=document.createElement("script"),a=document.getElementsByTagName("script")[0],b.src="https://chat-client-js.firehoseapp.com/chat-min.js",b.async=!0,a.parentNode.insertBefore(b,a)}();
+</script>
 </body>
 </html>
