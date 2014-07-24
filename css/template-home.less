@@ -1,29 +1,83 @@
 section#home-cta{
-	.banner{
+	.background{
 		background: transparent url('../images/banner-bg.png') center top repeat-x;
 		// background-size: cover;
 		border-radius: 4px;
 		padding: 20px;
-		.faux-table{
-			display: table;
-			.banner-copy{
-				display: table-cell;
-				width: 60%;
-				p.lead{
-					padding: 20px;
-					background: @background;
-					border-radius: 4px;
-					margin-right: 20px;
+		#banner-copy{
+			color: @background;
+			h2{
+				font-size: 2em;
+			}
+			ul{
+				margin-top: 53px;
+				color: @purp;
+			}
+			@media(max-width: @screen-xs-max){
+				.lead{
+					display: none;
+				}
+				ul{
+					margin-top: 0;
+					color: @background;
+				}
+				h2{
+					margin-top: 10px;
 				}
 			}
-			.cta{
-				display: table-cell;
-				vertical-align: middle;
-				.btn{
-					margin: 10px 0px;
+			@media(max-width: 380px){
+				.extra{
+					display: none;
 				}
-				img{
-					margin: 0 auto;
+			}
+		}
+		img{
+			margin: 0 auto;
+			&:last-child{
+				margin-top: 10px;
+			}
+			@media(max-width: @screen-xs-max){
+				display: none;
+			}
+		}
+		.form{
+			margin-top: 10px;
+			.input-group-addon{
+				background-color: rgba(255,255,255,.4);
+				border: 1px solid @background;
+				color: @background;
+				border-width: 1px 0px 1px 1px;
+			}
+			.form-control{
+				background-color: rgba(255,255,255,.4);
+				border: 1px solid @background;
+				color: @purp;
+				max-width: 100%;
+			}
+			@media(max-width: @screen-xs-max){
+				.input-group-addon, .form-control{
+					background-color: @background;
+					color: @sky-blue-alt;
+					border-color: @sky-blue-alt;
+				}
+				.btn.btn-primary{
+					border-color: @background;
+					color: @background;
+				}
+				::-webkit-input-placeholder {
+				   color: fade(@sky-blue-alt, 40%);
+				}
+
+				:-moz-placeholder { /* Firefox 18- */
+				   color: fade(@sky-blue-alt, 40%);  
+				}
+
+				::-moz-placeholder {  /* Firefox 19+ */
+				   color: fade(@sky-blue-alt, 40%);  
+				}
+
+				:-ms-input-placeholder {  
+				   color: fade(@sky-blue-alt, 40%);  
 				}
 			}
 		}

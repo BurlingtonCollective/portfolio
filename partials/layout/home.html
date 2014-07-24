@@ -1,22 +1,50 @@
 <section id="home-cta">
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="banner">
-					<div class="faux-table">
-						<div class="banner-copy">
-							<p class="lead">We're young and hungry.  Hungry for projects big and small - and the flexibility to match.  As freelancers we utilize our relationships and teamwork to meet your business and media needs, with a focus on web. Let's get started.</p>
+		<div class="background">
+			<div class="row">
+				<div id="banner-copy" class="col-xs-12 col-sm-7 col-md-6">
+					<h2>New Kids on the Block</h2>
+					<p class="lead">We're young and hungry.  Hungry for projects big and small - and the flexibility to match.  As freelancers we utilize our relationships and teamwork to meet your business and media needs, with a focus on web. Let's get started.</p>
+					<ul>
+						<li>Webapp Development</li>
+						<li>Commercial Websites</li>
+						<li>Content Management Systems</li>
+						<li>Responsive From Desktop to Mobile</li>
+						<li class="extra">Photography &amp; Video</li>
+						<li class="extra">Social Media Marketing</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-5 col-md-push-1">
+					<img alt="flourish" class="img-responsive" src="images/cta-top.png">
+					<form class="form home" ng-submit="sendContact()">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+								<input type="text" name="name" ng-model="contactForm.name" class="form-control input-lg" placeholder="Your Name">
+							</div>
 						</div>
-						<div class="cta">
-							<img alt="flourish" class="img-responsive" src="images/cta-top.png">
-							<button class="btn btn-primary btn-block">Contact Us</button>
-							<img alt="flourish" class="img-responsive" src="images/cta-bottom.png">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+								<input type="text" name="email" ng-model="contactForm.email" class="form-control input-lg" placeholder="Your Email">
+							</div>
 						</div>
-					</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+								<textarea rows="4" name="message" ng-model="contactForm.message" class="form-control input-lg" placeholder="Your Message"></textarea>
+							</div>
+						</div>
+						<div class="form-group" style="display: none;">
+							<input type="text" class="form-control" ng-model="contactForm.honeypot" name="honeypot">
+						</div>
+						<button type="submit" class="btn btn-primary btn-block">Send</button>
+					</form>
+					<img alt="flourish" class="img-responsive" src="images/cta-bottom.png">
 				</div>
 			</div>
 		</div>
-	</div>
+		</div>
 		<!-- <div class="jumbotron">
 			<div class="container-fluid">
 				<div class="col-xs-7">

@@ -1,5 +1,5 @@
 @import '../bower_components/bootstrap/less/bootstrap';
-
+@icon-font-path: "../bower_components/bootstrap/fonts/";
 // @purple: #6D05A3;
 // @sky-blue: #80C3B7;
 // @light-gray: #FAFAFA;
@@ -23,10 +23,30 @@
 
 @error: #FF5553;
 @success: #20B207;
-
+@input-color-placeholder: rgba(255,255,255,.8);
+@input-border-focus: @purp;
 // @import 'mixins';
-@import 'glyphicons';
+// @import 'glyphicons';
 // @import 'reset';
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset !important;  /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+}
+ 
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: /*your box-shadow*/,0 0 0 50px white inset !important;
+    -webkit-text-fill-color: #333;
+}
+
+.btn{
+	&.btn-primary{
+		background: transparent;
+		border-color: @sky-blue-alt;
+		color: @sky-blue-alt;
+		border-width: 2px;
+	}
+}
 
 html{
 	min-height: 100%;
@@ -92,13 +112,22 @@ header{
 		border: none;
 		.container{
 			padding: 0;
+			@media(max-width: @grid-float-breakpoint){
+				padding: 0 15px;
+			}
 		}
 		.brand .navbar-text{
 			margin-left: 0px;
+			@media(max-width: @grid-float-breakpoint){
+				margin-left: 15px;
+			}
 		}
 		.navbar-collapse{
 			padding-right: 0px;
 		}
+	}
+	.navbar-right{
+		margin-top: 12px;
 	}
 	nav{
 		h1.brand{
