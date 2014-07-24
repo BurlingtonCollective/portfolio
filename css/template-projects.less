@@ -1,0 +1,59 @@
+section.interior{
+	div.page-top{
+		position: relative;
+		margin: 0 -15px 40px;
+		h2{
+			position: absolute;
+			left: 15px;
+			bottom: 15px;
+			font-size: 4em;
+			margin: 0;
+			color: @background;
+		}
+	}
+}
+
+section#projects{
+	.project{
+		margin-bottom: 20px;
+		.clearfix();
+		div.project-copy{
+			& > span{
+				font-size: 1.4em;
+				font-weight: bold;
+			}
+			div.inner{
+				border: 1px solid @text-dark-gray;
+				border-width: 1px 0px 0px 1px;
+				padding-bottom: 20px;
+				.clearfix();
+				span{
+					float: right;
+					&.date{
+						float: none;
+						font-size: 1.2em;
+						font-weight: bold;
+						margin: 5px 0 0 5px;
+						display: inline-block;
+					}
+					&.title{
+						display: inline-block;
+						margin-top: 5px;
+					}
+				}
+				ul{
+					clear: both;
+					text-align: right;
+					list-style-type: none;
+					margin: 5px 0 0;
+					padding: 0;
+					font-size: .6em;
+					font-style: italic;
+				}
+			}
+		}
+		img.vanity{
+			margin-top: 25px;
+		}
+	}
+}
