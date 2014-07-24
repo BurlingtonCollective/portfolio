@@ -9,6 +9,7 @@ module.exports = function(grunt){
 					'build/master.js': [
 						'js/main.js',
 						'js/controllers/HomeCtrl.js',
+						'js/controllers/ProjectsCtrl.js',
 						'js/services/contactService.js'
 					]
 				}

@@ -6001,4 +6001,86 @@ section#home-cta .background .form .form-control {
     color: rgba(32, 163, 169, 0.4);
   }
 }
+section.interior div.page-top {
+  position: relative;
+  margin: 0 -15px 40px;
+}
+section.interior div.page-top h2 {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 4em;
+  margin: 0;
+  color: #fcfcfc;
+}
+section#projects .project {
+  margin-bottom: 20px;
+}
+section#projects .project:before,
+section#projects .project:after {
+  content: " ";
+  display: table;
+}
+section#projects .project:after {
+  clear: both;
+}
+section#projects .project:before,
+section#projects .project:after {
+  content: " ";
+  display: table;
+}
+section#projects .project:after {
+  clear: both;
+}
+section#projects .project div.project-copy > span {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+section#projects .project div.project-copy div.inner {
+  border: 1px solid #5e5d5d;
+  border-width: 1px 0px 0px 1px;
+  padding-bottom: 20px;
+}
+section#projects .project div.project-copy div.inner:before,
+section#projects .project div.project-copy div.inner:after {
+  content: " ";
+  display: table;
+}
+section#projects .project div.project-copy div.inner:after {
+  clear: both;
+}
+section#projects .project div.project-copy div.inner:before,
+section#projects .project div.project-copy div.inner:after {
+  content: " ";
+  display: table;
+}
+section#projects .project div.project-copy div.inner:after {
+  clear: both;
+}
+section#projects .project div.project-copy div.inner span {
+  float: right;
+}
+section#projects .project div.project-copy div.inner span.date {
+  float: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0 0 5px;
+  display: inline-block;
+}
+section#projects .project div.project-copy div.inner span.title {
+  display: inline-block;
+  margin-top: 5px;
+}
+section#projects .project div.project-copy div.inner ul {
+  clear: both;
+  text-align: right;
+  list-style-type: none;
+  margin: 5px 0 0;
+  padding: 0;
+  font-size: .6em;
+  font-style: italic;
+}
+section#projects .project img.vanity {
+  margin-top: 25px;
+}
 /*# sourceMappingURL=css/master.css.map */

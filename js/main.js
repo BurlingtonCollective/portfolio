@@ -10,5 +10,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			templateUrl: 'partials/layout/home.html',
 			controller: 'HomeCtrl',
 			pageTitle: 'Home'
+		})
+		.when('/projects', {
+			templateUrl: 'partials/layout/projects.html',
+			controller: 'ProjectsCtrl',
+			pageTitle: 'Projects'
 		});
 }])
