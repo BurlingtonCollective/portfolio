@@ -5783,8 +5783,8 @@ input:-webkit-autofill:focus {
 }
 .btn.btn-primary {
   background: transparent;
-  border-color: #20a3a9;
-  color: #20a3a9;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
   border-width: 2px;
 }
 html {
@@ -5918,7 +5918,7 @@ footer .wrapper .container .address li {
   font-size: .6em;
 }
 section#home-cta .background {
-  background: transparent url('../images/banner-bg.png') center top repeat-x;
+  background: transparent url('../images/banner-bg-diag.png') center top repeat-x;
   border-radius: 4px;
   padding: 20px;
 }
@@ -5972,7 +5972,7 @@ section#home-cta .background .form .input-group-addon {
 section#home-cta .background .form .form-control {
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid #fcfcfc;
-  color: #5d1644;
+  color: #fcfcfc;
   max-width: 100%;
 }
 @media (max-width: 767px) {
@@ -5987,15 +5987,15 @@ section#home-cta .background .form .form-control {
     color: #fcfcfc;
   }
   section#home-cta .background .form ::-webkit-input-placeholder {
-    color: rgba(32, 163, 169, 0.4);
+    color: rgba(32, 163, 169, 0.3);
   }
   section#home-cta .background .form :-moz-placeholder {
     /* Firefox 18- */
-    color: rgba(32, 163, 169, 0.4);
+    color: rgba(32, 163, 169, 0.3);
   }
   section#home-cta .background .form ::-moz-placeholder {
     /* Firefox 19+ */
-    color: rgba(32, 163, 169, 0.4);
+    color: rgba(32, 163, 169, 0.3);
   }
   section#home-cta .background .form :-ms-input-placeholder {
     color: rgba(32, 163, 169, 0.4);
