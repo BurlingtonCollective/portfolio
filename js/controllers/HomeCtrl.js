@@ -10,12 +10,12 @@ controllers.controller('HomeCtrl', ['$scope', 'contactService', function($scope,
 				email: $scope.contactForm.email,
 				message: $scope.contactForm.message
 			};
-			var result = contactService.pushSimpleForm(cleanObj);
-			if(result.data.success){
-				//showmessage
-			}else{
-				//show error
-			}
+			contactService.pushSimpleForm(cleanObj)
+				.then(function(result){
+					console.log(result);
+				}, function(response){
+					console.log(response);
+				});
 		}
 	}
 	
