@@ -21,10 +21,7 @@ module.exports = function(grunt){
 					yuicompress: true,
 					paths: ["css"],
 					livereload: true,
-					sourceMap: true,
-					sourceMapFilename: 'css/master.css.map',
-					sourceMapUrl: 'css/master.css.map',
-					sourceMapRootPath: '/'
+					sourceMap: true
 				},
 				files: {
 					'css/master.css': 'css/master.less'
