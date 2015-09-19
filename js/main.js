@@ -16,4 +16,4 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			controller: 'ProjectsCtrl',
 			pageTitle: 'Projects'
 		});
-}])
+}]);

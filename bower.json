@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "homepage": "https://github.com/BurlingtonCollective/portfolio",
+  "authors": [
+    "Zachary Lincoln <zach@daftlabs.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.2.9"
+  }
+}

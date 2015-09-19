@@ -1,5 +1,6 @@
 module.exports = function(grunt){
 	grunt.initConfig({
+		vendorPath: 'node_modules',
 		uglify: {
 			options: {
 				sourceMap: true
@@ -13,6 +14,21 @@ module.exports = function(grunt){
 						'js/services/contactService.js'
 					]
 				}
+			}
+		},
+		concat: {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				src: [
+					'<%= vendorPath %>/angular/angular.min.js',
+					'<%= vendorPath %>/angular-route/angular-route.min.js',
+					'bower_components/firebase/firebase.js',
+					'<%= vendorPath %>/angularfire/dist/angularfire.min.js',
+					'build/master.js'
+				],
+				dest: 'build/app.min.js'
 			}
 		},
 		less: {
@@ -33,12 +49,20 @@ module.exports = function(grunt){
 				options: {
 					livereload: true
 				},
-				files: ['css/**/*.less', 'js/**/*.js'],
-				tasks: ['less:development', 'uglify']
+				files: ['css/**/*.less'],
+				tasks: ['less:development']
+			},
+			js: {
+				options: {
+					livereload: true
+				},
+				files: ['js/**/*.js'],
+				tasks: ['uglify', 'concat']
 			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
