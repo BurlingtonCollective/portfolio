@@ -42,6 +42,17 @@ module.exports = function(grunt){
 				files: {
 					'css/master.css': 'css/master.less'
 				}
+			},
+			theme: {
+				options: {
+					yuicompress: true,
+					paths: ["css"],
+					livereload: true,
+					sourceMap: true
+				},
+				files: {
+					'css/theme-preview/chooser.css': 'css/theme-preview/chooser.less'
+				}
 			}
 		},
 		watch: {
@@ -50,7 +61,7 @@ module.exports = function(grunt){
 					livereload: true
 				},
 				files: ['css/**/*.less'],
-				tasks: ['less:development']
+				tasks: ['less:theme']
 			},
 			js: {
 				options: {

@@ -1,0 +1,55 @@
+@import '../../node_modules/bootstrap/less/bootstrap';
+
+@fire: #D14C28;
+@purp: #534066;
+@import 'themes/soft';
+
+@font-family-sans-serif: 'Josefin Slab', 'Helvetica Neue', Helvetica, sans-serif;
+@font-size-base: 20px;
+
+.brand {
+    padding: @grid-gutter-width 0;
+}
+
+body {
+    background: fade(@gray-base, 2%) url(../../images/dotnoise-light-grey.png) 0 0 repeat;
+}
+
+.btn-contrast {
+    .button-variant(#fff, @fire, @fire);
+}
+
+.navbar-tall {
+    .box-shadow(inset 0 0 40px 6px fade(@brand-primary, 13%));
+
+    @media (min-width: @grid-float-breakpoint) {
+        .little-burst {
+            background: transparent url(../../images/little-burst.png) center ~'calc(100% - 10px)' no-repeat;
+        }
+
+        .nav {
+            margin: 40px 0 20px;
+            border-bottom: 2px solid @purp;
+
+            a {
+                font-size: unit(26/@font-size-base, em);
+                text-transform: uppercase;
+                letter-spacing: .09em;
+            }
+        }
+
+        .lead {
+            font-size: unit(24/@font-size-base, em);
+        }
+    }
+}
+
+.page-header {
+    border-bottom: 6px solid @fire;
+}
+
+.flag .inner{
+    width: 100%;
+    background: @fire;
+    // margin-top: -20px;
+}
