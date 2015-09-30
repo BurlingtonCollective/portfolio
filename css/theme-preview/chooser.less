@@ -73,7 +73,7 @@ body {
 }
 
 .page-header {
-    border-bottom: 6px double @fire;
+    border-bottom: 6px double @purp;
 }
 
 .flag .inner{
@@ -81,3 +81,64 @@ body {
     background: @fire;
     // margin-top: -20px;
 }
+
+.media-list {
+    margin-top: -28px;
+
+    .media {
+        margin: 0;
+    }
+
+    .media-left {
+        @flag-padding: 15px;
+        @inner-padding: 6px;
+        @border-width: 2px;
+        background: @purp;
+        background-image: url(../../images/dotnoise-light-grey.png);
+        min-width: 220px;
+        padding: @flag-padding @flag-padding @flag-padding @flag-padding;
+
+        .month, .date, .type {
+            display: block;
+            color: @white;
+        }
+
+        .month {
+            margin-left: @inner-padding + @border-width;
+            margin-bottom: @inner-padding;
+            font-size: unit(18/@font-size-base, em);
+        }
+
+        .date, .type {
+            margin: @inner-padding;
+        }
+
+        .type {
+            font-size: unit(12/@font-size-base, em);
+            font-style: italic;
+        }
+
+        .inner {
+            border: @border-width solid @white;
+            border-width: @border-width 0 0 @border-width;
+
+            img {
+                max-width: 140px;
+                padding: 40px 0 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
