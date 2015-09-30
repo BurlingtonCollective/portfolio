@@ -4,17 +4,21 @@
 
 
 //== Colors
+@blue: #526E8F;
+@charcoal: #323232;
+@void: #13141C;
+
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #13141C;
+@gray-base:              @charcoal;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         #526E8F; // #337ab7
+@brand-primary:         @blue; // #337ab7
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -26,7 +30,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #FBFCFF;
+@body-bg:               #ffffff;
 //** Global text color on `<body>`.
 @text-color:            @gray-base;
 
@@ -420,7 +424,7 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         transparent;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
@@ -428,7 +432,7 @@
 //== Tabs
 @nav-tabs-border-color:                     #ddd;
 
-@nav-tabs-link-hover-border-color:          @gray-lighter;
+@nav-tabs-link-hover-border-color:          transparent;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @gray;
