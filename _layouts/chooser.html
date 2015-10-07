@@ -6,29 +6,40 @@
     <link rel="stylesheet" href="css/theme-preview/chooser.css">
 </head>
 <body class="theme-soft">
-    <nav class="navbar-tall">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <a href="#" class="brand center-block">
-                        <img class="img-responsive" src="images/logo-dark.png" alt="Burlington Collective">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-xs-offset-2 text-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">projects</a></li>
-                        <li><a href="#">developers</a></li>
-                        <li><a href="#" class="login">log in</a></li>
-                    </ul>
-                    <p class="lead">lorem ipsum dolor sit amet, consectetur adipisicing elit. a impedit dolor provident odio, in dolore laboriosam.</p>
-                    <button class="btn-lg btn-contrast">post your project</button>
+    <section id="main">
+        <nav class="navbar-tall">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#" class="brand center-block">
+                            <img class="img-responsive" src="images/logo-dark.png" alt="Burlington Collective">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-xs-offset-2 text-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">projects</a></li>
+                            <li><a href="#">developers</a></li>
+                            <li><a href="#" class="login toggle-oc">log in</a></li>
+                        </ul>
+                        <p class="lead">lorem ipsum dolor sit amet, consectetur adipisicing elit. a impedit dolor provident odio, in dolore laboriosam.</p>
+                        <button class="btn-lg btn-contrast">post your project</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    {{ content }}
-    <nav id="theme-chooser">
-
-    </nav>
+        </nav>
+        {{ content }}
+    </section>
+    <section id="forms" class="toggle-oc">
+        <form>Hello World</form>
+    </section>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.toggle-oc').on('click', function() {
+                $('body').toggleClass('oc-active-forms');
+            });
+        });
+    </script>
 </body>
 </html>

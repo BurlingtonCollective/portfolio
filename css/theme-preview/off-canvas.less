@@ -1,0 +1,33 @@
+@transition-duration: .4s;
+@transition-function: ease-in-out;
+
+body {
+  #main {
+    position: relative;
+    .transition(~"transform @{transition-duration} @{transition-function}");
+    z-index: 2;
+  }
+
+  #forms {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    z-index: 1;
+  }
+
+  @media (min-width: 0px) {
+    @open-width: 80%;
+
+    #forms {
+      width: @open-width;
+    }
+
+    &.oc-active-forms {
+      #main {
+        .translate(-@open-width, 0);
+      }
+    }
+  }
+}
