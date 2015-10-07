@@ -1,12 +1,34 @@
 @import '../../node_modules/bootstrap/less/bootstrap';
 
-@white: #fff;
-@fire: #D14C28;
-@purp: #534066;
 @import 'themes/soft';
 
 @font-family-sans-serif: 'Josefin Slab', 'Helvetica Neue', Helvetica, sans-serif;
 @font-size-base: 20px;
+
+.project-theme(@text-color, @copy-color, @primary-color) {
+    .flag {
+        .date, .month, .type {
+            color: @text-color;
+        }
+
+        .inner {
+            border-color: @primary-color;
+        }
+
+        hr {
+            border-color: @primary-color;
+        }
+    }
+
+    .copy {
+        background-color: @primary-color;
+        color: @copy-color;
+    }
+
+    .cta .btn-primary {
+        .button-variant(@primary-color, transparent, @primary-color);
+    }
+}
 
 .brand {
     padding: @grid-gutter-width 0;
@@ -21,7 +43,7 @@ body {
 }
 
 .btn-contrast {
-    .button-variant(#fff, @fire, @fire);
+    .button-variant(#fff, @brand-contrast, @brand-contrast);
 }
 
 [class*="btn"] {
@@ -30,12 +52,11 @@ body {
 }
 
 .navbar-tall {
-
     @media (min-width: @grid-float-breakpoint) {
         .nav {
             float: right;
             margin: 40px 0 20px;
-            border-bottom: 4px double @purp;
+            border-bottom: 4px double @brand-secondary;
 
             a {
                 font-size: unit(22/@font-size-base, em);
@@ -83,154 +104,7 @@ body {
     border-bottom: 6px double @purp;
 }
 
-// .flag .inner{
-//     width: 100%;
-//     background: @fire;
-//     // margin-top: -20px;
-// }
-
-.media-list {
-    margin-top: -28px;
-
-    .media {
-        margin: 0;
-    }
-
-    .media-left {
-        @flag-padding: 15px;
-        @inner-padding: 6px;
-        @border-width: 2px;
-        background: @purp;
-        background-image: url(../../images/dotnoise-light-grey.png);
-        min-width: 220px;
-        padding: @flag-padding @flag-padding @flag-padding @flag-padding;
-
-        .month, .date, .type {
-            display: block;
-            color: @white;
-        }
-
-        .month {
-            margin-left: @inner-padding + @border-width;
-            margin-bottom: @inner-padding;
-            font-size: unit(18/@font-size-base, em);
-        }
-
-        .date, .type {
-            margin: @inner-padding;
-        }
-
-        .type {
-            font-size: unit(12/@font-size-base, em);
-            font-style: italic;
-        }
-
-        .inner {
-            border: @border-width solid @white;
-            border-width: @border-width 0 0 @border-width;
-
-            img {
-                max-width: 140px;
-                padding: 40px 0 0;
-            }
-        }
-    }
-}
-
 .project {
-    @flag-padding: 15px;
-    @inner-padding: 6px;
-    @border-width: 2px;
-
-    .flag {
-        background: @purp;
-        background-image: url(../../images/dotnoise-light-grey.png);
-        padding: @flag-padding @flag-padding 0;
-
-        .title, .date, .type {
-            display: block;
-            color: @white;
-        }
-
-        .date {
-            margin-left: @inner-padding + @border-width;
-            margin-bottom: @inner-padding;
-        }
-
-        .title {
-            font-size: unit(22/@font-size-base, em);
-        }
-
-        .title, .type {
-            margin: @inner-padding;
-            margin-right: 0;
-        }
-
-        .type {
-            font-size: unit(12/@font-size-base, em);
-            font-style: italic;
-        }
-
-        .inner {
-            border: @border-width solid @white;
-            border-width: @border-width 0 0 @border-width;
-            margin-bottom: 40px;
-            position: relative;
-
-            img {
-                max-width: 140px;
-                padding: 40px 0 0;
-            }
-
-            .btn-primary {
-                position: absolute;
-                bottom: 40px;
-                right: 0;
-                .button-variant(@white, transparent, @white);
-            }
-        }
-
-        .date, .inner {
-            .opacity(.9);
-        }
-
-        .crop {
-            margin: 0 (-@flag-padding - 2px);
-
-            svg {
-                display: block;
-                fill: @white;
-            }
-        }
-    }
-
-    .copy {
-        padding-top: 34px + @flag-padding;
-    }
-
-    .cta {
-        text-align: right;
-        padding-top: 40px;
-
-        .btn-primary {
-            .button-variant(@brand-primary, transparent, @brand-primary);
-        }
-
-        .btn-contrast {
-            .button-variant(@fire, transparent, @fire);
-        }
-    }
-
-    .page-header + & {
-        margin-top: -28px;
-    }
-
-    + .project {
-        margin-top: 60px;
-    }
-}
-
-.project-2 {
     @flag-padding: 0px;
     @inner-padding: 10px;
     @border-width: 2px;
@@ -242,7 +116,6 @@ body {
 
         .date, .month, .type {
             display: block;
-            color: @charcoal;
         }
 
         .month {
@@ -266,7 +139,7 @@ body {
         }
 
         .inner {
-            border: @border-width solid @purp;
+            border: @border-width solid transparent;
             border-width: @border-width 0 0 @border-width;
             position: relative;
             padding-bottom: 30px;
@@ -279,7 +152,7 @@ body {
         hr {
             margin: -1px 0 0 1px;
             width: 40%;
-            border: 2px solid @purp;
+            border: 2px solid transparent;
             border-width: 2px 0 0 0;
             transform-origin: left;
             .rotate(45deg);
@@ -288,11 +161,9 @@ body {
     }
 
     .copy {
-        background: @purp;
         background-image: url(../../images/dotnoise-light-grey.png);
         margin-top: 33px;
         position: relative;
-        color: @copy-color;
         padding: @inner-padding * 4;
 
         h3 {
@@ -321,59 +192,6 @@ body {
         }
     }
 
-    // .cta {
-    //     padding: 60px @grid-gutter-width;
-    //     margin-left: -@grid-gutter-width;
-    //     position: relative;
-
-    //     .btn-primary {
-    //         .button-variant(@copy-color, transparent, @copy-color);
-    //         white-space: normal;
-    //     }
-
-    //     .crop {
-    //         position: absolute;
-    //         right: -@grid-gutter-width - 2px;
-    //         top: 0;
-    //         height: 0;
-    //         width: 40%;
-    //         padding-left: 40%;
-    //         padding-top: 40%;
-    //         overflow: hidden;
-            
-    //         &:before {
-    //             content: "";
-    //             display: block;
-    //             width: 0;
-    //             height: 0;
-    //             margin-left: -500px;
-    //             margin-top: -500px;
-    //             border-left: 500px solid transparent;
-    //             border-top: 500px solid @white;
-    //         }
-    //     }
-
-    //     .crop-2 {
-    //         position: absolute;
-    //         right: -@grid-gutter-width - 2px;
-    //         bottom: 0;
-    //         height: 0;
-    //         width: 40%;
-    //         padding-top: 40%;
-    //         overflow: hidden;
-
-    //         &:after {
-    //             content: "";
-    //             display: block;
-    //             width: 0;
-    //             height: 0;
-    //             margin-top: -500px;
-    //             border-top: 500px solid transparent;
-    //             border-right: 500px solid @white;
-    //         }
-    //     }
-    // }
-
     .cta-column {
         position: absolute;
         bottom: 40px;
@@ -390,13 +208,22 @@ body {
         }
 
         .btn-primary {
-            .button-variant(@brand-primary, transparent, @brand-primary);
             border-radius: 0;
             white-space: normal;
             letter-spacing: 0.2em;
             margin-bottom: 40px;
             border-width: 2px;
         }
+    }
+
+    .project-theme(@charcoal, fade(@white, 85%), @purp);
+
+    &:nth-child(odd) {
+        .project-theme(@charcoal, fade(@white, 85%), @brand-primary);
+    }
+
+    & + .project {
+        margin-top: 80px;
     }
 }
 
