@@ -22,12 +22,14 @@
     }
 
     .copy {
+        background-image: url(../../images/dotnoise-light-grey.png);
         background-color: @primary-color;
         color: @copy-color;
     }
 
     .cta .btn-primary {
-        .button-variant(@primary-color, transparent, @primary-color);
+        .button-variant(@copy-color, @primary-color, @primary-color);
+        background-image: url(../../images/dotnoise-light-grey.png);
     }
 }
 
@@ -169,7 +171,6 @@ body {
     }
 
     .copy {
-        background-image: url(../../images/dotnoise-light-grey.png);
         margin-top: 33px;
         position: relative;
         padding: @inner-padding * 4;

@@ -5,15 +5,15 @@
   //------------------------------
   var MESH = {
     width: 2,
-    height: 6,
+    height: 2,
     depth: 6,
-    segments: 7,
-    slices: 10,
+    segments: 18,
+    slices: 14,
     xRange: 0.14,
     yRange: 0.1,
     zRange: 1.0,
     ambient: '#555555',
-    diffuse: '#3e3e3e',
+    diffuse: '#323232',
     speed: 0.0017
   };
 
@@ -125,7 +125,7 @@
   var now, start = Date.now();
   var center = FSS.Vector3.create();
   var attractor = FSS.Vector3.create();
-  var container = document.getElementById('container');
+  var container = document.getElementById('forms');
   var output = document.getElementById('output');
   var ui = document.getElementById('ui');
   var renderer, scene, mesh, geometry, material;
