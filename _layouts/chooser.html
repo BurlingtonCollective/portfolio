@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,600">
     <link rel="stylesheet" href="css/theme-preview/chooser.css">
 </head>
-<body class="theme-soft oc-active-forms">
+<body class="theme-soft">
     <section id="main">
         <nav class="navbar-tall">
             <div class="container">
@@ -22,15 +22,28 @@
                             <li><a href="#" class="login toggle-oc">log in</a></li>
                         </ul>
                         <p class="lead">lorem ipsum dolor sit amet, consectetur adipisicing elit. a impedit dolor provident odio, in dolore laboriosam.</p>
-                        <button class="btn-lg btn-contrast">post your project</button>
+                        <button class="btn-lg btn-contrast toggle-oc">post your project</button>
                     </div>
                 </div>
             </div>
         </nav>
         {{ content }}
     </section>
-    <section id="forms" class="toggle-oc">
-        <form>Hello World</form>
+    <section id="forms">
+        <form>
+            <div class="container-fluid">
+                <div class="form-group">
+                    <label>email address</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="password" class="form-control">
+                </div>
+                <button type="button" class="btn btn-contrast pull-right">submit</button>
+                <button type="button" class="btn btn-default pull-right toggle-oc">cancel</button>
+            </div>
+        </form>
     </section>
     
     <script type="text/javascript">
@@ -70,7 +83,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
         $(function() {
-            $('.toggle-oc').on('click', function() {
+            $('.toggle-oc').on('click', function(e) {
+                e.preventDefault();
+
                 $('body').toggleClass('oc-active-forms');
             });
         });
