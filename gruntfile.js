@@ -1,6 +1,7 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 		vendorPath: 'node_modules',
+		publicPath: 'public',
 		uglify: {
 			options: {
 				sourceMap: true
@@ -8,10 +9,8 @@ module.exports = function(grunt){
 			build: {
 				files: {
 					'build/master.js': [
-						'js/main.js',
-						'js/controllers/HomeCtrl.js',
-						'js/controllers/ProjectsCtrl.js',
-						'js/services/contactService.js'
+						'<%= publicPath %>/main.js',
+						'<%= publicPath %>/modules/home/ctrl.js'
 					]
 				}
 			}
@@ -60,14 +59,17 @@ module.exports = function(grunt){
 				options: {
 					livereload: true
 				},
-				files: ['css/**/*.less'],
+				files: [
+					'css/**/*.less',
+					'<%= publicPath %>/**/*.less'
+				],
 				tasks: ['less:theme']
 			},
 			js: {
 				options: {
 					livereload: true
 				},
-				files: ['js/**/*.js'],
+				files: ['<%= publicPath %>/**/*.js'],
 				tasks: ['uglify', 'concat']
 			}
 		}

@@ -1,50 +1,52 @@
 <!DOCTYPE html>
-<html ng-app="portfolio">
+<html ng-app="public">
 <head>
-	<title ng-bind="pageTitle">Burlington Collective</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,600|Quattrocento:400,700">
-	<link rel="stylesheet" type="text/css" href="css/master.css">
+    <title>BC Theme Preview</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,600">
+    <link rel="stylesheet" href="css/theme-preview/chooser.css">
 </head>
-<body>
-	<header>
-		<div class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle">
-						<span class="sr-only">Toggle Navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="#/" class="brand">
-						<h1 class="navbar-text">Burlington Collective</h1>
-					</a>
-				</div>
-				<div class="collapse navbar-collapse" id="main-nav">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#/">Home</a></li>
-						<li><a href="#/projects">Projects</a></li>
-						<li><a href="#/about">About</a></li>
-						<li><a href="#/advice">Advice</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</header>
+<body class="theme-soft">
+    <section id="main">
+        <nav class="navbar-tall">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#" class="brand center-block">
+                            <img class="img-responsive" src="images/logo-dark.png" alt="Burlington Collective">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-xs-offset-2 text-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">projects</a></li>
+                            <li><a href="#">developers</a></li>
+                            <li><a href="#" class="login toggle-oc">log in</a></li>
+                        </ul>
+                        <p class="lead">lorem ipsum dolor sit amet, consectetur adipisicing elit. a impedit dolor provident odio, in dolore laboriosam.</p>
+                        <button class="btn-lg btn-contrast toggle-oc">post your project</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="ng-view" ng-view></div>
+    </section>
+    <section id="forms">
+        <div id="close" class="toggle-oc">&times;</div>
+        <form>
+            <div class="container-fluid">
+                <div class="form-group">
+                    <label>email address</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="password" class="form-control">
+                </div>
+                <button type="button" class="btn btn-contrast pull-right">submit</button>
+                <button type="button" class="btn btn-default pull-right toggle-oc">cancel</button>
+            </div>
+        </form>
+    </section>
 
-	<div id="main" ng-view autoscroll role="angular-view-target">
-		<!-- templates loaded here -->
-	</div>
-
-	<footer>
-		<div class="wrapper">
-			<div class="container">
-				<!-- <div class="stretch"></div> -->
-			</div>
-		</div>
-	</footer>
-
-	<script type="text/javascript" src="build/app.min.js"></script>
+    <script type="text/javascript" src="/build/app.min.js"></script>
 </body>
 </html>
