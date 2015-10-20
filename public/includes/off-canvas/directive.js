@@ -6,17 +6,23 @@ angular
             link: function(scope, element, attrs) {
                 var activeClass = 'oc-active-forms';
 
-                scope.$root.$on('offcanvas.toggle', function() {
+                scope.toggleOC = function() {
                     element.toggleClass(activeClass);
-                });
+                }
 
-                scope.$root.$on('offcanvas.open', function() {
+                scope.addOC = function() {
                     element.addClass(activeClass);
-                });
+                }
 
-                scope.$root.$on('offcanvas.close', function() {
+                scope.removeOC = function() {
                     element.removeClass(activeClass);
-                });
+                }
+
+                scope.$root.$on('offcanvas.toggle', scope.toggleOC);
+
+                scope.$root.$on('offcanvas.open', scope.addOC);
+
+                scope.$root.$on('offcanvas.close', scope.removeOC);
             }
         }
     }]);
