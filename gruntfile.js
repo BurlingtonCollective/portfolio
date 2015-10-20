@@ -10,7 +10,8 @@ module.exports = function(grunt){
 				files: {
 					'build/master.js': [
 						'<%= publicPath %>/main.js',
-						'<%= publicPath %>/modules/home/ctrl.js'
+						'<%= publicPath %>/modules/**/*.js',
+						'<%= publicPath %>/includes/**/*.js'
 					]
 				}
 			}
