@@ -1,6 +1,6 @@
 angular
     .module('public')
-    .factory(['$firebaseAuth', function($firebaseAuth) {
+    .factory('firebaseFactory', ['$firebaseAuth', function($firebaseAuth) {
         var url = 'https://burlingtoncollective.firebaseio.com';
         var ref = new Firebase(url);
 
