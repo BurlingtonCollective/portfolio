@@ -56,6 +56,7 @@
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
+@font-weight:             200;
 
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -75,7 +76,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    @font-weight;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -111,9 +112,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
+@border-radius-base:        0px;
 @border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-small:       0px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -151,7 +152,7 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-@btn-font-weight:                normal;
+@btn-font-weight:                @font-weight;
 
 @btn-default-color:              #333;
 @btn-default-bg:                 #fff;
@@ -190,12 +191,12 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       transparent;
+@input-bg:                       @gray-base;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @white;
+@input-color:                    fade(@white, 85%);
 //** `<input>` border color
 @input-border:                   @white;
 
@@ -204,7 +205,7 @@
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
 @input-border-radius:            0;
 //** Large `.form-control` border radius
-@input-border-radius-large:      @border-radius-large;
+@input-border-radius-large:      0;
 //** Small `.form-control` border radius
 @input-border-radius-small:      @border-radius-small;
 
@@ -212,7 +213,7 @@
 @input-border-focus:             @blue;
 
 //** Placeholder text color
-@input-color-placeholder:        #999;
+@input-color-placeholder:        fade(@white, 45%);
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -631,7 +632,7 @@
 
 @alert-padding:               15px;
 @alert-border-radius:         @border-radius-base;
-@alert-link-font-weight:      bold;
+@alert-link-font-weight:      @font-weight;
 
 @alert-success-bg:            @state-success-bg;
 @alert-success-text:          @state-success-text;
@@ -787,7 +788,7 @@
 //** Badge background color in active nav link
 @badge-active-bg:             #fff;
 
-@badge-font-weight:           bold;
+@badge-font-weight:           @font-weight;
 @badge-line-height:           1;
 @badge-border-radius:         10px;
 
@@ -829,7 +830,7 @@
 //
 //##
 
-@close-font-weight:           bold;
+@close-font-weight:           @font-weight;
 @close-color:                 #000;
 @close-text-shadow:           0 1px 0 #fff;
 

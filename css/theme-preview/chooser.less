@@ -2,8 +2,9 @@
 @import 'off-canvas';
 
 @import 'themes/soft';
-
-@font-family-sans-serif: 'Josefin Slab', 'Helvetica Neue', Helvetica, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Titan+One|Titillium+Web: 400,200);
+//@font-family-sans-serif: 'Josefin Slab', 'Helvetica Neue', Helvetica, sans-serif;
+@font-family-sans-serif: 'Titillium Web', 'Helvetica Neue', Helvetica, sans-serif;
 @font-size-base: 20px;
 
 .project-theme(@text-color, @copy-color, @primary-color) {
@@ -43,12 +44,13 @@ html {
 
 body {
     height: 100%;
+    padding-bottom: 51px;
 }
 
 #main {
     min-height: 100%;
     padding: 40px 0;
-    background: @body-bg;
+    background: @body-bg url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/ecailles.png");
     .box-shadow(inset 0 0 40px 6px fade(@brand-primary, 20%));
 }
 
@@ -59,6 +61,14 @@ body {
 [class*="btn"] {
     border-style: solid;
     border-radius: 0px;
+}
+
+.btn-secondary {
+    .button-variant(fade(@white, 85%), @purp, @purp);
+}
+
+.form-control {
+    font-weight: @font-weight !important;
 }
 
 .navbar-tall {
@@ -268,6 +278,19 @@ body {
     cursor: pointer;
 }
 
+#contact {
+    padding-top: 57px;
+
+    .form-control {
+        //background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/stardust.png");
+        background-position: center 30%;
+    }
+
+    @media (max-width: @screen-sm-max) {
+        padding-top: 0;
+        clear: both;
+    }
+}
 
 
 
